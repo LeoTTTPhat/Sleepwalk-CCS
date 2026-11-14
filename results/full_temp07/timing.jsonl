@@ -1,0 +1,2 @@
+{"exp": "asr", "seed": 20261015, "wall_s": 524.5, "cache_hit": 192, "cache_miss": 408, "workers": 2, "memguard_scale": 1.0, "attempt": "0", "finished": "2026-10-16 15:09:47"}
+{"exp": "ccs", "seed": 20261015, "wall_s": 3043.6, "cache_hit": 6, "cache_miss": 2490, "workers": 2, "memguard_scale": 1.0, "attempt": "0", "finished": "2026-10-16 16:00:31"}

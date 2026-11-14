@@ -1,0 +1,5 @@
+{
+ "with_calls": 2492,
+ "baseline_calls": 322,
+ "note": "measured agent calls in this invocation (CRN: baselines shared per user)"
+}

@@ -1,0 +1,117 @@
+{
+ "generated": "2026-10-15T09:39:16",
+ "geolife": {
+  "users": 182,
+  "trajectories": 18670,
+  "points": 24876978,
+  "users_with_mode_labels": 69,
+  "share_points_in_beijing_bbox(sampled)": 0.7368,
+  "date_range": [
+   "2007-04-12",
+   "2012-07-27"
+  ],
+  "users_with_>=100k_points": 54,
+  "median_points_per_user": 35311
+ },
+ "gowalla": {
+  "checkins": 6442892,
+  "users": 107092,
+  "locations": 1280969,
+  "date_range": [
+   "2009-02-04",
+   "2010-10-23"
+  ],
+  "friendship_edges_directed": 1900654,
+  "beijing_bbox": {
+   "checkins": 5126,
+   "users": 328,
+   "locations": 1497,
+   "users_with_>=50_checkins": 17,
+   "users_with_>=100_checkins": 7
+  },
+  "austin_bbox": {
+   "checkins": 339543,
+   "users": 7883,
+   "locations": 19213,
+   "users_with_>=50_checkins": 1536,
+   "users_with_>=100_checkins": 800
+  }
+ },
+ "osm_beijing": {
+  "pois_named": 49803,
+  "pois_with_opening_hours": 1247,
+  "safety_critical": {
+   "amenity=hospital": 383,
+   "amenity=police": 188,
+   "amenity=shelter": 172,
+   "amenity=pharmacy": 95,
+   "amenity=clinic": 61,
+   "amenity=social_facility": 57,
+   "amenity=fire_station": 53,
+   "amenity=doctors": 7,
+   "leisure=park": 5,
+   "healthcare=hospital": 2,
+   "emergency=yes": 2
+  },
+  "top_categories": {
+   "public_transport=stop_position": 14058,
+   "public_transport=platform": 13208,
+   "amenity=restaurant": 3089,
+   "amenity=school": 1511,
+   "leisure=park": 1075,
+   "amenity=bank": 959,
+   "tourism=hotel": 848,
+   "amenity=fast_food": 833,
+   "amenity=cafe": 827,
+   "public_transport=station": 551,
+   "amenity=kindergarten": 544,
+   "tourism=attraction": 522,
+   "shop=supermarket": 482,
+   "shop=convenience": 466,
+   "amenity=hospital": 383
+  },
+  "road_ways": 141012,
+  "pois_with_name_en": 9567,
+  "safety_critical_total": 1025,
+  "poi_extract": "data/derived/pois_beijing.jsonl"
+ },
+ "osm_austin": {
+  "pois_named": 19622,
+  "pois_with_opening_hours": 5510,
+  "safety_critical": {
+   "amenity=shelter": 195,
+   "amenity=clinic": 184,
+   "amenity=pharmacy": 140,
+   "amenity=doctors": 110,
+   "amenity=social_facility": 97,
+   "amenity=fire_station": 96,
+   "amenity=hospital": 41,
+   "amenity=police": 28,
+   "healthcare=hospital": 1,
+   "emergency=yes": 1,
+   "amenity=veterinary": 1
+  },
+  "top_categories": {
+   "public_transport=platform": 2375,
+   "amenity=restaurant": 1625,
+   "amenity=fast_food": 1038,
+   "leisure=park": 805,
+   "amenity=place_of_worship": 618,
+   "amenity=fuel": 581,
+   "amenity=school": 473,
+   "shop=convenience": 457,
+   "amenity=cafe": 398,
+   "office=yes": 398,
+   "amenity=parking": 340,
+   "shop=car_repair": 330,
+   "amenity=bank": 314,
+   "tourism=hotel": 295,
+   "shop=hairdresser": 291
+  },
+  "road_ways": 304136,
+  "pois_with_name_en": 50,
+  "safety_critical_total": 894,
+  "poi_extract": "data/derived/pois_austin.jsonl"
+ },
+ "elapsed_s": 44.9
+}

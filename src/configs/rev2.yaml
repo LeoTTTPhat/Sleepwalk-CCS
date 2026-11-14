@@ -1,0 +1,51 @@
+# Stage-8 (round-2 revision) config.  Same victim, city, seed and decode seed as rev1,
+# so the agent call cache is reused: the n_max=40 extensions pay only for contexts 17-40.
+run: rev1                 # write into results/rev1/ beside the round-1 rows
+city: austin
+backend: ollama
+model: qwen2.5:7b
+temperature: 0.0
+seed: 20261015
+workers: 2
+n_users: 20
+
+# CCS constants: identical to rev1 except n_max_big, which is the budget the round-2
+# reviewers asked for (the deployed n_max=16 has exact power 0.012 at its own
+# alternative rho1, and mean contexts used 15.48/16, so every stream was truncation-bound)
+n_max: 16
+n_max_big: 40
+alpha: 0.05
+beta: 0.2
+eps: 0.0599
+p_target: 0.6
+gamma: 0.05
+rho0_mode: point
+rho1_floor: 0.08
+exploration: 0.3
+safety_weight: 0.5
+calib_n: 20
+calib_contexts: 10
+ccs_n_benign: 20
+ccs_n_legit: 20
+keep_details: 40
+qmass_mc: 200
+uniform_variants: [standard]
+
+# corpus-B n_max=40 run: a pre-specified stratified subsample of the sleepers (the
+# held-out null set is used in full, so the FPR at the larger budget is measured on all 40)
+n40_sleepers: 48
+
+# corpus C attack arm
+asr3_contexts: 1
+
+# end-to-end retrieval arm (rigor major 7: the threat model says entries are RETRIEVED,
+# every earlier experiment forced the candidate into the prompt)
+retr_model: sentence-transformers/all-MiniLM-L6-v2
+retr_store: 50
+retr_k: 5
+retr_contexts: 4
+retr_n_b: 30
+retr_n_c: 12
+
+# second judge model for the prompt-sensitivity check (validity major 6)
+judge_models: [qwen2.5:7b, llama3.1:8b-instruct-q4_K_M]

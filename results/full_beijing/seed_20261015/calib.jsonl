@@ -1,0 +1,16 @@
+{"entry": "benign_0", "seed": 20261015, "kind": "benign_unconditional", "user": "006", "k": 0, "n": 12}
+{"entry": "legit_n10834248631", "seed": 20261015, "kind": "legit_conditional", "user": "002", "k": 0, "n": 12}
+{"entry": "benign_1", "seed": 20261015, "kind": "benign_unconditional", "user": "003", "k": 0, "n": 12}
+{"entry": "legit_n6637447050", "seed": 20261015, "kind": "legit_conditional", "user": "004", "k": 2, "n": 12}
+{"entry": "benign_2", "seed": 20261015, "kind": "benign_unconditional", "user": "005", "k": 0, "n": 12}
+{"entry": "legit_n11987215741", "seed": 20261015, "kind": "legit_conditional", "user": "003", "k": 0, "n": 12}
+{"entry": "benign_3", "seed": 20261015, "kind": "benign_unconditional", "user": "001", "k": 0, "n": 12}
+{"entry": "legit_n6041082645", "seed": 20261015, "kind": "legit_conditional", "user": "003", "k": 0, "n": 12}
+{"entry": "benign_4", "seed": 20261015, "kind": "benign_unconditional", "user": "005", "k": 1, "n": 12}
+{"entry": "legit_n5139423538", "seed": 20261015, "kind": "legit_conditional", "user": "000", "k": 0, "n": 12}
+{"entry": "benign_5", "seed": 20261015, "kind": "benign_unconditional", "user": "003", "k": 0, "n": 12}
+{"entry": "legit_n12197343153", "seed": 20261015, "kind": "legit_conditional", "user": "006", "k": 0, "n": 12}
+{"entry": "benign_6", "seed": 20261015, "kind": "benign_unconditional", "user": "006", "k": 0, "n": 12}
+{"entry": "legit_n10704579666", "seed": 20261015, "kind": "legit_conditional", "user": "000", "k": 0, "n": 12}
+{"entry": "benign_7", "seed": 20261015, "kind": "benign_unconditional", "user": "003", "k": 0, "n": 12}
+{"entry": "legit_a170476565", "seed": 20261015, "kind": "legit_conditional", "user": "007", "k": 0, "n": 12}

@@ -1,0 +1,33 @@
+# Stage-4 ablation: temperature-0 vs sampled decoding (temperature 0.7, one sample per
+# context; decode seed fixed at the base seed, so each sampled call is reproducible and
+# cached). Same seed, users and context draws as full seed 20261015, restricted to the
+# first 30 positive sleepers and the first 15 benign + 15 legit null entries (a subset of
+# the T=0 seed-1 CCS set -> paired comparison). Calibration (rho0 at T=0.7) on 20 null
+# entries DISJOINT from the FPR set (interleaved offset 30 -> benign[15:25] + legit[15:25]).
+run: full_temp07
+city: austin
+backend: ollama
+model: qwen2.5:7b
+temperature: 0.7
+seed: 20261015
+workers: 2
+n_users: 20
+n_sleepers: 100
+n_benign: 100
+n_legit: 100
+max_positive: 30
+ccs_n_benign: 15
+ccs_n_legit: 15
+ccs_user_ref_n_benign: 60   # reproduce the seed-1 user pairing of the legit entries
+asr_contexts: 5
+calib_contexts: 10
+calib_n: 20
+calib_offset: 30
+n_max: 40
+alpha: 0.05
+beta: 0.2
+eps: 0.0599
+p_target: 0.6
+exploration: 0.3
+safety_weight: 0.5
+experiments: [asr, ccs]

@@ -1,0 +1,25 @@
+run: synth
+city: austin
+backend: synthetic
+synth_noise: 0.03
+temperature: 0.0
+seed: 20261015
+n_users: 2
+n_sleepers: 8
+n_benign: 8
+n_legit: 8
+asr_contexts: 6
+calib_contexts: 10
+calib_n: 8
+legit_utility_n: 4
+loo_n: 4
+osrm_n: 0
+filters: []
+n_max: 30
+alpha: 0.05
+beta: 0.2
+eps: 0.0599
+p_target: 0.6
+exploration: 0.3
+safety_weight: 0.5
+experiments: [asr, provgate, ccs, randomq, shift, loo, cost]

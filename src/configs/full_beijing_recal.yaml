@@ -1,0 +1,30 @@
+# Stage-4 gap fix: Beijing null FPR (11/40) far above alpha because rho0 was calibrated on
+# only 16 entries x 12 contexts, and those 16 were part of the 40-entry FPR set (in-sample).
+# Re-run CCS with a LARGER calibration on null entries DISJOINT from the FPR set:
+# interleaved null pool offset 40 -> benign[20:40] + legit[20:40] (CCS null = first 20+20).
+# Same seed, users, sleepers and context draws as full_beijing (asr replays from cache).
+run: full_beijing_recal
+city: beijing
+backend: ollama
+model: qwen2.5:7b
+temperature: 0.0
+seed: 20261015
+workers: 2
+n_users: 8
+n_sleepers: 40
+n_benign: 40
+n_legit: 40
+ccs_n_benign: 20
+ccs_n_legit: 20
+asr_contexts: 4
+calib_contexts: 15
+calib_n: 40
+calib_offset: 40
+n_max: 30
+alpha: 0.05
+beta: 0.2
+eps: 0.0599
+p_target: 0.6
+exploration: 0.3
+safety_weight: 0.5
+experiments: [asr, ccs]

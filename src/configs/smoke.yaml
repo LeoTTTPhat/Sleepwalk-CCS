@@ -1,0 +1,33 @@
+# Smoke config: tiny subsets, smallest real model (qwen2.5:7b via Ollama).
+run: smoke
+city: austin
+backend: ollama
+model: qwen2.5:7b
+temperature: 0.0
+seed: 20261015
+
+# dataset sizes (smoke)
+n_users: 2
+n_sleepers: 4
+n_benign: 4
+n_legit: 4
+
+# experiment knobs
+asr_contexts: 2
+calib_contexts: 3
+calib_n: 4
+legit_utility_n: 2
+loo_n: 2
+osrm_n: 2
+filters: [deepset, protectai]   # Prompt-Guard-2 descoped: gated repo, no HF token
+
+# CCS / SPRT
+n_max: 8
+alpha: 0.05
+beta: 0.2
+eps: 0.0599
+p_target: 0.6
+exploration: 0.3
+safety_weight: 0.5
+
+experiments: [asr, filters, provgate, ccs, randomq, shift, loo, osrm, cost]

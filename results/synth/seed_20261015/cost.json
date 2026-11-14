@@ -1,0 +1,10 @@
+{
+ "measured_call_s": 8.642673492431641e-07,
+ "mean_calls_per_sleeper_write_shared": 17.375,
+ "mean_calls_per_benign_write_shared": 22.3125,
+ "per_sleeper_write_s_shared": 1.5016645193099976e-05,
+ "per_sleeper_write_s_unshared": 3.003329038619995e-05,
+ "per_benign_write_s_shared": 1.9283965229988098e-05,
+ "per_benign_write_s_unshared": 3.8567930459976196e-05,
+ "note": "latency measured on uncached calls on the shared (contended) machine; shared: baseline per context reused; unshared: paired call per context"
+}

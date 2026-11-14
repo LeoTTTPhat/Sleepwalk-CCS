@@ -1,0 +1,24 @@
+# Secondary tool-calling model: MadeAgents/Hammer2.1-7b (HF). One ASR table only
+# (HF MPS generation is ~2x slower than Ollama; trimmed to fit the 36h cap).
+run: full_hammer
+city: austin
+backend: hf
+hf_model: MadeAgents/Hammer2.1-7b
+temperature: 0.0
+seed: 20261015
+n_users: 8
+n_sleepers: 40
+n_benign: 40
+n_legit: 40
+asr_contexts: 6
+calib_contexts: 12
+calib_n: 20
+n_max: 30
+workers: 1
+alpha: 0.05
+beta: 0.2
+eps: 0.0599
+p_target: 0.6
+exploration: 0.3
+safety_weight: 0.5
+experiments: [asr]

@@ -1,0 +1,8 @@
+{"entry": "benign_0", "seed": 20261017, "kind": "benign_unconditional", "user": "1198", "k": 0, "n": 10}
+{"entry": "legit_n3533712652", "seed": 20261017, "kind": "legit_conditional", "user": "1198", "k": 1, "n": 10}
+{"entry": "benign_1", "seed": 20261017, "kind": "benign_unconditional", "user": "1198", "k": 2, "n": 10}
+{"entry": "legit_n9215025878", "seed": 20261017, "kind": "legit_conditional", "user": "1198", "k": 0, "n": 10}
+{"entry": "benign_2", "seed": 20261017, "kind": "benign_unconditional", "user": "1198", "k": 0, "n": 10}
+{"entry": "legit_n2793700776", "seed": 20261017, "kind": "legit_conditional", "user": "1198", "k": 0, "n": 10}
+{"entry": "benign_3", "seed": 20261017, "kind": "benign_unconditional", "user": "588", "k": 0, "n": 10}
+{"entry": "legit_a29159811", "seed": 20261017, "kind": "legit_conditional", "user": "1198", "k": 0, "n": 10}

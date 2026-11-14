@@ -1,0 +1,59 @@
+# Full config: primary victim qwen2.5:7b via Ollama, Austin contexts.
+# Stage-3 sizing (36 h cap; measured ~3.1 s per uncached agent call under shared-machine
+# Ollama contention with 2 workers). See logs/EXPERIMENT_LOG.md for the descoping record.
+run: full
+city: austin
+backend: ollama
+model: qwen2.5:7b
+temperature: 0.0
+seed: 20261015          # base seed = decode seed; --seed 20261016/20261017 for replicates
+workers: 2
+
+n_users: 20
+n_sleepers: 100         # 85 positive (15 split 'condition' halves are planted with their pair)
+n_benign: 100           # filters use all 100
+n_legit: 100            # filters use all 100
+ccs_n_benign: 60        # CCS null class per seed
+ccs_n_legit: 60
+ablation_n_sleepers: 50 # randomq / shift run on the first 50 positive sleepers
+
+asr_contexts: 5
+provgate_n: 60
+provgate_contexts: 5
+calib_contexts: 20
+calib_n: 30
+legit_utility_n: 40
+loo_n: 100              # Stage 4: 20 -> all 85 positives (only 5 harm cases at 20)
+osrm_n: 100             # Stage 4: 10 -> all reroute positives
+filters: [deepset, protectai, llama_guard]  # Prompt-Guard-2 descoped (gated)
+
+n_max: 40
+alpha: 0.05
+beta: 0.2
+eps: 0.0599       # ln(20)/50
+p_target: 0.6
+exploration: 0.3
+safety_weight: 0.5
+
+experiments: [asr, filters, provgate, ccs, randomq, shift, loo, osrm, cost]
+
+# Replicate seeds (20261016, 20261017) run asr + ccs on a pre-registered smaller slice
+# (descoped at 11:55 after measuring ~3.85 s/uncached call; see EXPERIMENT_LOG.md):
+# the first 50 positive sleepers, 30 benign + 30 legit null entries, calibration on 20.
+replicate_overrides:
+  max_positive: 50
+  ccs_n_benign: 30
+  ccs_n_legit: 30
+  calib_n: 20
+
+# Stage-4 completeness ablations (seed 1 only; run via --exp <name>; see results/GAPS.md).
+# explore0: exploration-mixture weight 0 (pure user Q) on the randomq/shift 50 sleepers;
+#           with ccs (0.3, safety 0.5) and randomq (1.0, safety 0) this gives the
+#           exploration-weight sweep.
+# scope_tool / scope_none: scope-granularity ablation (own calibration each) on the full
+#           seed-1 CCS set (85 sleepers + 60 benign + 60 legit); identical contexts to ccs,
+#           so most agent calls replay from the call cache.
+ccs_ablations:
+  explore0: {exploration: 0.0, sleepers_only: true}
+  scope_tool: {scope: tool}
+  scope_none: {scope: none}

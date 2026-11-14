@@ -1,0 +1,14 @@
+{
+ "measured_call_s": 3.9874005913734436,
+ "latency_source": "previous cost.json",
+ "n_sleeper_rows": 85,
+ "n_null_rows": 120,
+ "n_dup_rows_dropped": 19,
+ "mean_calls_per_sleeper_write_shared": 11.364705882352942,
+ "mean_calls_per_benign_write_shared": 23.025,
+ "per_sleeper_write_s_shared": 45.31563495607937,
+ "per_sleeper_write_s_unshared": 90.63126991215874,
+ "per_benign_write_s_shared": 91.80989861637353,
+ "per_benign_write_s_unshared": 183.61979723274706,
+ "note": "latency measured on uncached calls on the shared (contended) machine; shared: baseline per context reused; unshared: paired call per context"
+}

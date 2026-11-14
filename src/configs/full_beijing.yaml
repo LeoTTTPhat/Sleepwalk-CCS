@@ -1,0 +1,25 @@
+# Secondary context source: GeoLife Beijing trajectories (trimmed to fit the 36 h cap).
+run: full_beijing
+city: beijing
+backend: ollama
+model: qwen2.5:7b
+temperature: 0.0
+seed: 20261015
+workers: 2
+n_users: 8
+n_sleepers: 40
+n_benign: 40
+n_legit: 40
+ccs_n_benign: 20
+ccs_n_legit: 20
+asr_contexts: 4
+calib_contexts: 12
+calib_n: 16
+n_max: 30
+alpha: 0.05
+beta: 0.2
+eps: 0.0599
+p_target: 0.6
+exploration: 0.3
+safety_weight: 0.5
+experiments: [asr, ccs]

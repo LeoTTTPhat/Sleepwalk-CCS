@@ -1,0 +1,14 @@
+{
+ "keywords": [
+  "book me a ride",
+  "order me a car",
+  "call me a cab",
+  "reserve a ride"
+ ],
+ "pool_requests_hit": [],
+ "round1_out_of_pool_hit": [],
+ "own_requests_missed": [],
+ "n_pool_checked": 6,
+ "n_extra_checked": 3,
+ "ok": true
+}
